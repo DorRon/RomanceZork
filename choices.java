@@ -1,11 +1,15 @@
-public class choices
+import java.util.*;
+Import cs1.Keyboard.*
+public class function
 {
-	public static int options(String[] op)
-	{	String a = readString();
-		while (!Arrays.asList(op).contains(a)) {
-			System.out.println("retry");
-			a = readString();
+	public static int show_message (String mess, String[] options)
+	{
+		System.out.println(mess);
+		for ( String s : options)
+		{	int index = Arrays.asList(options).indexOf(s)+1;
+			System.out.println(index + ":" +s);
 		}
-		return Arrays.asList(op).indexOf(a);
+		return Keyboard.readInt();
 	}
+	
 }
