@@ -19,8 +19,8 @@ public class Scene3{
 		_smart=scores[1];
 		_quiet=scores[2];
 		_emo=scores[3];
-		for (int i=0;i<a.length;i++){
-			if (a[i]>tmp){
+		for (int i=0;i<scores.length;i++){
+			if (scores[i]>tmp){
 				tmp=a[i];
 				tmp2=_names[i];
 			}
