@@ -2,11 +2,10 @@
 /*                                             
                                               Romantic Accord 
 */
-import java.util.Scanner;
+import cs1.Keyboard.*;
 public class Intro{    
-    private int player_score = 15; //init player score in game 
-    private String user_name;
-    private Scanner sc= new Scanner (System.in);
+    private int _score = 15; //init player score in game 
+    private String _name;
     private String final WELCOME = "A romance RPG aiming to assist those in possibly upcoming stressful situations.\n"
                          +  "This RPG follows the Zork format, and is solely text-based.\n"
                          +  "You start by answering a questionaire in the first scene,\n"
@@ -19,19 +18,19 @@ public class Intro{
                          +  "Make the right choices and enjoy the game.";
     public Intro(){}
     public String getName(){
-       return user_name;
+       return _name;
     }
     public String setName(String s){
         String tmp=user_name;
-        user_name=s;
+        _name=s;
         return tmp;
     }
     public void start (){
         System.out.println("\t\t\t***A Jaunt Through Romance***\n");
-        System.out.println(welcomeMessage);
+        System.out.println(WELCOME);
         System.out.print("Enter your first name here: ");
-        game.setName(sc.next());
-        System.out.println("Welcome to the Romantic Accord " + user_name + "\n\n");
+        _name=readString();
+        System.out.println("Welcome to the Romantic Accord " + _name + "\n\n");
     }
 
     
