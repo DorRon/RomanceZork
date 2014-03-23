@@ -19,5 +19,9 @@ public class function
 	}
 	public static void show_message(String mess)
 	{System.out.println(mess);}
+       
+        public static void show_message(String mess, String speaker)
+	{System.out.println(speaker+":"+mess);}
 	
 }
+

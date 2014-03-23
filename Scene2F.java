@@ -9,7 +9,7 @@ class Scene2F{
         _score=score;
       }
 public int scene(){
-    System.out.println("Your alarm clock wakes you up at 7:15, 10 minutes later then you should've woken up.");
+    System.out.println("Your alarm clock wakes you up at 7:15, 10 minutes later than you should've woken up.");
     while(true){
         System.out.println("Do you take more time to prepare and come class late, or do you leave unprepared in order to make it on time [late/early]?");
         String r = Keyboard.readString();
@@ -65,8 +65,8 @@ public int scene(){
         }
     } return _score;
   }
-  public static void main(String[] args){
+/**  public static void main(String[] args){
     Scene2F try1 = new Scene2F("Dor", 17);
-    try1.scene();
-  }
+    try1.scene(); 
+  } **/
 }
