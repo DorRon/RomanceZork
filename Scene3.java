@@ -21,7 +21,7 @@ public class Scene3{
 		_emo=scores[3];
 		for (int i=0;i<scores.length;i++){
 			if (scores[i]>tmp){
-				tmp=a[i];
+				tmp=scores[i];
 				tmp2=_names[i];
 			}
 		}
