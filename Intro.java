@@ -1,8 +1,8 @@
 
 /*                                             
-                                              Romantic Accord 
+                                              A Jaunt through Romance 
 */
-import cs1.Keyboard.*;
+import cs1.Keyboard;
 public class Intro{    
     private int _score = 15; //init player score in game 
     private String _name;
@@ -17,20 +17,18 @@ public class Intro{
                          +  "Make your own calculations and hope for the best.\n"
                          +  "Make the right choices and enjoy the game.";
     public Intro(){}
-    public String getName(){
-       return _name;
-    }
     public String setName(String s){
         String tmp=user_name;
         _name=s;
         return tmp;
     }
-    public void start (){
+    public String start(){
         System.out.println("\t\t\t***A Jaunt Through Romance***\n");
         System.out.println(WELCOME);
         System.out.print("Enter your first name here: ");
-        _name=readString();
+        _name=Keyboard.readString();
         System.out.println("Welcome to the Romantic Accord " + _name + "\n\n");
+	return _name;
     }
 
     
