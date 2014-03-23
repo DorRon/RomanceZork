@@ -7,9 +7,6 @@ public class scene1{
     private int smartScore = 15;
     private int freakScore = 15;
     private String girlName;
-    public int getScore(){
-        return dumbScore;
-        }
     public int[] scene(String name){
         int[] ret=new int[3];
         System.out.println("Brrrriiinnggg!\n It's the first day of college. Time to wake up.\n");
@@ -91,7 +88,9 @@ public class scene1{
             }
             
         }
-        return ret;     
+        ret[0]=dumbScore;
+        ret[1]=smartScore;
+        ret[2]=freakScore;
     }
     public static void main(String[] args){
         scene1 try1=new scene1();
