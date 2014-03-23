@@ -65,8 +65,8 @@ public int scene(){
         }
     } return _score;
   }
-/**  public static void main(String[] args){
+    public static void main(String[] args){
     Scene2F try1 = new Scene2F("Dor", 17);
     try1.scene(); 
-  } **/
+  } 
 }
