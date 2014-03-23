@@ -1,11 +1,23 @@
+
 /*                                             
                                               Romantic Accord 
 */
 import java.util.Scanner;
 public class RZ{    
-    public int player_score = 15; //init player score in game 
-    public static String user_name;
+    private int player_score = 15; //init player score in game 
+    private String user_name;
+    private Scanner sc= new Scanner (System.in);
+    public RZ(){}
+    public String getName(){
+       return user_name;
+    }
+    public String setName(String s){
+        String tmp=user_name;
+        user_name=s;
+        return tmp;
+    }
     public static void main(String[] args){
+        RZ game=new RZ();
         String welcomeMessage = "A romance RPG aiming to assist those in possibly upcoming stressful situations.\n"
                          +  "This RPG follows the Zork format, and is solely text-based.\n"
                          +  "You start by answering a questionaire in the first scene,\n"
@@ -18,14 +30,11 @@ public class RZ{
                          +  "Make the right choices and enjoy the game.";
         System.out.println("\t\t\t***Romantic Accord***\n");
         System.out.println(welcomeMessage);
-        getName();
+        System.out.print("Enter your first name here: ");
+        game.setName(sc.next());
+        System.out.println("Welcome to the Romantic Accord " + user_name + "\n\n");
         scene1.main();
     }
-    public static void getName(){
-        Scanner player_name = new Scanner(System.in);
-        System.out.print("Enter your first name here: ");
-        user_name = player_name.next();
-        System.out.println("Welcome to the Romantic Accord " + user_name + "\n\n");
-    }
+
     
 }
