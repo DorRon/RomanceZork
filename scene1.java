@@ -91,6 +91,7 @@ public class scene1{
         ret[0]=dumbScore;
         ret[1]=smartScore;
         ret[2]=freakScore;
+	return ret;
     }
     public static void main(String[] args){
         scene1 try1=new scene1();
