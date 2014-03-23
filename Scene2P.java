@@ -23,21 +23,21 @@ public class Scene2P{
 			String t = Keyboard.readString();
 			System.out.println("Ashley: \"Hahaha! You're so cute.\"\nShe brushes your arm lightly.  \"Wanna sit here?\"");
 			while (true){
-				System.out.println("Do you sit next to her [y/n]?)
+				System.out.println("Do you sit next to her [y/n]?");
 				s=Keyboard.readString();
 				if (s.equals("y")){
 					_score++;
-					System.out.println("Ashley: \"Awesome! Why don't you call me after school hun?\"")
+					System.out.println("Ashley: \"Awesome! Why don't you call me after school hun?\"");
 					break;
 				}
 				if (s.equals("n")){
 					_score--;
-					System.out.println("Ashley: \"You suck.\" she says, and sticks her tongue out.")
+					System.out.println("Ashley: \"You suck.\" she says, and sticks her tongue out.");
 					break;
 				}
 			}
 			if (_score >= 18){
-			    System.out.println("*class ends* \nAshley: \"Don't forget to call me!\")
+			    System.out.println("*class ends* \nAshley: \"Don't forget to call me!\"");
 			    break;
 			} else {
 			     System.out.println("*class ends* \nAshley: Even though you were a jerk, my number's 987-654-3210. Call me, maybe.");
@@ -48,6 +48,6 @@ public class Scene2P{
     			} 
 		}
 	return _score;
+    }
 }
-}
-}
+

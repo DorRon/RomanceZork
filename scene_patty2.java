@@ -13,13 +13,13 @@ public class scene_patty2 {
 		String[] options2 = {"yes","No"};
 		int choice;
 		function.show_message("As you walked into your class, you realized that you forgot to bring your hw with you");
-		choice = function.show_message("Do you want to ask patty to give you her hw ? [yes/No]",options2);
+		choice = function.show_message("Do you want to ask patty to give you her homework? [yes/No]",options2);
 		if (choice == 1)
 		
 		{
 			_score += 1;
 			function.nl();
-			function.show_message("Hey! Patty :), can i see your homework",_name);
+			function.show_message("Hey! Patty :), can I see your homework",_name);
 			if ((int)(Math.random()*100) >20)	
 				{
 					function.show_message("No... you can't","Patty");
