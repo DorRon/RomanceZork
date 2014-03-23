@@ -6,7 +6,7 @@ import cs1.Keyboard;
 public class Intro{    
     private int _score = 15; //init player score in game 
     private String _name;
-    private String final WELCOME = "A romance RPG aiming to assist those in possibly upcoming stressful situations.\n"
+    private String WELCOME = "A romance RPG aiming to assist those in possibly upcoming stressful situations.\n"
                          +  "This RPG follows the Zork format, and is solely text-based.\n"
                          +  "You start by answering a questionaire in the first scene,\n"
                          +  "Your decisions will impact the reactions of the partner you choose to pursue throughout the game,\n"
@@ -18,7 +18,7 @@ public class Intro{
                          +  "Make the right choices and enjoy the game.";
     public Intro(){}
     public String setName(String s){
-        String tmp=user_name;
+        String tmp=_name;
         _name=s;
         return tmp;
     }

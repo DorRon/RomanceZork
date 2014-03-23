@@ -9,11 +9,11 @@ public class Driver{
 	private String _name; 
 	public void run(){
 		Intro begin=new Intro();
-		name =begin.start();
+		_name =begin.start();
 		scene1 scene=new scene1();
 		_scores=scene.scene(_name);
-		scene2 scene=new scene2(_name,_scores);
-		_scores=scene.scene();
+		scene2 nscene=new scene2(_name,_scores);
+		_scores=nscene.scene();
 	}
 	public static void main(String [] args){
 		Driver game=new Driver();
