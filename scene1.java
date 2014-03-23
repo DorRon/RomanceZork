@@ -5,14 +5,13 @@ import cs1.Keyboard;
 public class scene1{
     private int dumbScore = 15;
     private int smartScore = 15;
-    private int quietScore = 15;
     private int freakScore = 15;
     private String girlName;
     public int getScore(){
         return dumbScore;
         }
     public int[] scene(String name){
-        int[] ret=new int[4];
+        int[] ret=new int[3];
         System.out.println("Brrrriiinnggg!\n It's the first day of college. Time to wake up.\n");
         while (true){
             System.out.println("You're getting prepared for classes. Do you put on cologne[y/n]?\n");
@@ -20,24 +19,21 @@ public class scene1{
             if (s.equals("y")){
                 dumbScore += 1;
                 smartScore += 1;
-                quietScore += 1;
                 freakScore += 1;
                 break;
             } else if (s.equals("n")){
                 dumbScore -= 1;
                 smartScore -= 1;
-                quietScore -= 1;
                 freakScore -= 1;
                 break;
             }       
         }
-        System.out.println("You arrive to class 2 minutes early, there are four girls who capture your attention\n");
-        System.out.println("1) A girl with frizzy and wavy hair. She's wearing a bright pink tank top and tight shorts. And, you notice, she has red lipstick and black eyeliner on.\n");
-        System.out.println("2) A girl with short hair up until her shoulders. She's somewhat raggy overused clothes. You notice she has a little acne and a pair of glasses.\n");
-        System.out.println("3) A girl wearing a floral skirt with a plain white top. She has long smooth black hair. You notice she separates herself from the crowd of students.\n");
-        System.out.println("4) A girl wearing all black slightly torn clothes. she shaved only one side of her hair and the other is blonde and curly. You notice her flamboyant black lipstick.");
+        System.out.println("You arrive to class 2 minutes early, there are three girls who capture your attention\n");
+        System.out.println("1) A girl with frizzy and wavy hair. She's wearing a bright pink tank top and tight shorts. And, you notice, she has red lipstick and black eyeliner on. She seems very gregarious and amicable, maybe even too much. \n");
+        System.out.println("2) A girl with short hair up until her shoulders. She's somewhat raggy overused clothes. You notice she has a little acne and a pair of glasses. Perhaps she cares more about her studies than her appearence.");
+        System.out.println("3) A girl wearing all black slightly torn clothes. she shaved only one side of her hair and the other is blonde and curly. You notice her flamboyant black lipstick. You can't miss her, she's the center of attention, but is it in a good way?");
         while (true){
-            System.out.println("You have the option to approach one of the girls before class begins. [enter 1-4 to choose which girl to approach]");
+            System.out.println("You have the option to approach one of the girls before class begins. [enter 1-3 to choose which girl to approach]");
             int t = Keyboard.readInt();
             if (t == 1){
                  System.out.println("Oh hello, how are you?\n");
@@ -53,14 +49,7 @@ public class scene1{
                 smartScore += 1;
                 girlName = "Patty";
                 break;
-            } else if (t == 3){
-                System.out.println("Hi.");
-                String r = Keyboard.readString(); 
-                System.out.println("I'm Julie *Julie smiles* *Bell Goes off, class is starting*");
-                quietScore += 1;
-                girlName = "Julie";
-                break;
-            } else if (t == 4) {
+            } else if (t == 3) {
                 System.out.println("Hey, what's up?");
                 String r = Keyboard.readString();
                 System.out.println("Nice, I'm Gabbi by the way. *Bell Goes off, class is starting*");
@@ -78,9 +67,6 @@ public class scene1{
                 } else if (r.equals("y") && girlName.equals("Patty")){
                     smartScore +=1;
                     break;
-                } else if (r.equals("y") && girlName.equals("Julie")){
-                    quietScore +=1;
-                    break;
                 } else if (r.equals("y") && girlName.equals("Gabbi")){
                     freakScore += 1;
                     break;
@@ -95,10 +81,6 @@ public class scene1{
             } else if (r.equals("y") && smartScore < 19){
                 System.out.println("Sorry not yet, I don't know you well enough.");
                 smartScore -= 1;
-                break;
-            } else if (r.equals("y") && quietScore < 19) {
-                System.out.println("*smirks and shakes her head*");
-                quietScore -= 1;
                 break;
             } else if (r.equals("y") && freakScore == 18){
                 System.out.println("Um ya why not? It's 987-654-3210.");
