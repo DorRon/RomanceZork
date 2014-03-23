@@ -1,4 +1,3 @@
-import cs1.Keyboard.*;
 public class Choices
 {
 	public static int options(String[] op)
