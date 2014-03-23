@@ -5,7 +5,7 @@ public class Driver{
 	private int _score;
 	private int[] _scores=new int[4];
 	private String _name; 
-	private String[] _names={"Ashley","Patty","Julie","Gabbi"};
+	private String[] _names={"Ashley","Patty","Gabbi"};
 	private String iso(int[] scores){
 		int tmp=-1000000;
 		String tmp2;
@@ -23,12 +23,27 @@ public class Driver{
 		scene1 scene=new scene1();
 		_scores=scene.scene(_name);
 		_her=iso(_scores);
-		scene2 nscene=new scene2(_name,_score);
-		_score=nscene.scene();
+		if (_her.equals("Ashley")){
+			Scene2P pretty=new Scene2P(_name,_score);
+			_score=pretty.scene();
+		}
+		if (_her.equals("Patty")){
+			scene_patty2 patty=new scene_patty2(_name,_score);
+			_score=patty2.scene();
+		}
+		if (_her.equals("Gabbi")){
+			Scene2F f=new Scene2F(_name,_score);
+			_score=f.scene();
+			Scene3F f2=new Scene3F(_name,_score);
+			f2.scene();
+		}
 	}
+
 	public static void main(String [] args){
 		Driver game=new Driver();
 		game.run();
+		System.out.println("Thanks for playing!");
+		
 	}
 }
 
