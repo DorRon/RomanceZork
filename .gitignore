@@ -5,3 +5,4 @@
 !cs1.jar
 *.war
 *.ear
+!Keyboard.class
