@@ -27,11 +27,39 @@ public int scene(){
                 if (_score == 18){
                     System.out.println("*class ends* \nGabbi: You have my number right, call me after school.");
                     _score += 1;
-                    break;
+                    //Call or not query
+                    System.out.println("Do you wish to call Gabbi? [y/n]");
+                    String q = Keyboard.readString();
+                    if (q.equals("y")){
+                        System.out.println("*ring ring*\n Oh hey " + _name + ", What's up?");
+                        String c = Keyboard.readString();
+                        System.out.println("So what are you doing now? I'm listening to some death metal music I guess?");
+                        String b = Keyboard.readString(); 
+                        System.out.println("Alright listen, I'm glad you called, I really have to go take care of some business alright? Hopefully I'll see you tomorrow. Good Night.");
+                        _score += 2;
+                        break;
+                    } else if(q.equals("n")){
+                        _score -=2;
+                        break;
+                    }
+                    
                 } else {
                      System.out.println("*class ends* \nGabbi: You seem like a nice guy, my number's 987-654-3210. Call me sometime.");
                      _score +=1;
-                     break;
+                     System.out.println("Do you wish to call Gabbi? [y/n]");
+                     String d = Keyboard.readString();
+                     if (d.equals("y")){
+                        System.out.println("*ring ring*\n Oh hey " + _name + ", What's up?");
+                        String c = Keyboard.readString();
+                        System.out.println("So what are you doing now? I'm listening to some death metal music I guess?");
+                        String b = Keyboard.readString(); 
+                        System.out.println("Alright listen, I'm glad you called, I really have to go take care of some business alright? Hopefully I'll see you tomorrow. Good Night.");
+                        _score += 2;
+                        break;
+                     } else if (d.equals("n")){
+                        _score -=2;
+                        break; 
+                     }
                 }
              }
         }
