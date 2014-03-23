@@ -9,7 +9,7 @@ public class scene_patty2 {
 			_name = name;
 			_score = score;
 		};
-		public void scene() {
+		public int scene() {
 		String[] options2 = {"yes","No"};
 		int choice;
 		function.show_message("As you walked into your class, you realized that you forgot to bring your hw with you");
@@ -26,10 +26,10 @@ public class scene_patty2 {
 					 String[] options3 = {"I hate you", "why?","Okay, but can we be friends"};
 					 choice = function.show_message(_name+":",options3);
 					 if (choice == 1)
-					 {_score -=10; function.show_message("Adios Biatch",_name);}
+					 {_score -=10; function.show_message("Adios Losarr",_name);}
 					 else if (choice == 2)
 					 {	options2[0] = "Fair enough, but Can we be friends?";
-					  options2[1] = "You are such a pussy";
+					  options2[1] = "You are such a loser";
 						 
 						 choice = function.show_message("Because Ms.Albu is gonna find out. \nand i dont want to get into any trouble",options2);
 						if (choice == 1){function.show_message("Yea:) Sure",_name); _score+=20;}
@@ -46,6 +46,7 @@ public class scene_patty2 {
 			{	function.nl();
 				function.show_message("You are honest! that is good!! Too bad you are gonna fail your Apush class");
 			}
+		return _score;
 		}
 		
 			

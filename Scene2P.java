@@ -12,10 +12,10 @@ public class Scene2P{
 		while(true){
 		System.out.println("Do you take more time to prepare and come class late, or do you leave unprepared in order to make it on time [leave/prepare]?");
 		String r = Keyboard.readString();
-		if (r.equals("late")){
+		if (r.equals("prepare")){
 		    _score +=1;
 		    System.out.println("You were irresponsible, and late, and Ashley loves it.  AND you looked good.\n ");   
-		} else if(r.equals("early") || r.equals("late")) {
+		} if(r.equals("leave") || r.equals("prepare")) {
 		     System.out.println("Do you want to sit next to Ashley today? [y/n]");
 		     String s = Keyboard.readString();
 		     if (s.equals("y")){
@@ -39,13 +39,14 @@ public class Scene2P{
 			if (_score >= 18){
 			    System.out.println("*class ends* \nAshley: \"Don't forget to call me!\"");
 			    break;
-			} else {
-			     System.out.println("*class ends* \nAshley: Even though you were a jerk, my number's 987-654-3210. Call me, maybe.");
+			} else if (_score<18){
+			     System.out.println("\n Bye!!");
 			     _score--;
 			     break;
 			}
         	     }
-    			} 
+    			}
+	 
 		}
 	return _score;
     }

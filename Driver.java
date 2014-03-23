@@ -8,7 +8,7 @@ public class Driver{
 	private String[] _names={"Ashley","Patty","Gabbi"};
 	private String iso(int[] scores){
 		int tmp=-1000000;
-		String tmp2;
+		String tmp2="";
 		for (int i=0;i<scores.length;i++){
 			if (scores[i]>tmp){
 				tmp=scores[i];
@@ -29,7 +29,7 @@ public class Driver{
 		}
 		if (_her.equals("Patty")){
 			scene_patty2 patty=new scene_patty2(_name,_score);
-			_score=patty2.scene();
+			_score=patty.scene();
 		}
 		if (_her.equals("Gabbi")){
 			Scene2F f=new Scene2F(_name,_score);
