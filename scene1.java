@@ -87,9 +87,28 @@ public class scene1{
                 }
         }
         while (true){
-            System.out.println(girlName
+            System.out.println(girlName + " is look very cute, you can't help but look at her. By the end of class you want to obtain her number. Do you build up the courage to ask her?[y/n]");
+            String r = Keyboard.readString();
+            if (r.equals("y") && dumbScore == 18){
+                System.out.println("Ya sure, it's 987-654-3210, text me sometime.");
+                break;
+            } else if (r.equals("y") && smartScore < 19){
+                System.out.println("Sorry not yet, I don't know you well enough.");
+                smartScore -= 1;
+                break;
+            } else if (r.equals("y") && quietScore < 19) {
+                System.out.println("*smirks and shakes her head*");
+                quietScore -= 1;
+                break;
+            } else if (r.equals("y") && freakScore == 18){
+                System.out.println("Um ya why not? It's 987-654-3210.");
+                break;
+            } else if (r.equals("n")){
+                System.out.println("You leave your first day at college alone, and silently return to your home.");
+                break;
+            }
+            
         }
-        System.out.println(dumbScore + smartScore + quietScore + freakScore);
         return ret;     
     }
     public static void main(String[] args){
