@@ -1,4 +1,4 @@
-public class Choices
+public class choices
 {
 	public static int options(String[] op)
 	{	String a = readString();
