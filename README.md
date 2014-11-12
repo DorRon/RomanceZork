@@ -1,4 +1,6 @@
 RomanceZork
 ===========
 
-hackBCA entry
+hackBCA entry.
+
+A zork inspired romance based text RPG. 
